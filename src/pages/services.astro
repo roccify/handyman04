@@ -1,16 +1,20 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import Testimonials from '../components/Testimonials.astro';
+import QuoteForm from '../components/QuoteForm.astro';
 import content from '../data/content.json';
-const { services } = content;
+const { services, business } = content;
 ---
 
 <MainLayout title="Services | ReliableFix Handyman Rochester NY">
 
-  <!-- HERO BANNER: yellow background -->
-  <div style="background:#F2A93B; padding-top:120px;" class="pb-0">
-    <div class="max-w-7xl mx-auto px-6 lg:px-10 pb-10 text-center">
-      <h1 class="text-5xl font-bold tracking-tight text-black">Services</h1>
+  <!-- HERO BANNER: yellow -->
+  <div style="background:#F2A93B; padding-top:80px;" class="pb-0">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-12 text-center">
+      <p class="uppercase text-xs tracking-widest font-semibold text-black/60 mb-3">WHAT WE DO</p>
+      <h1 class="text-5xl font-bold tracking-tight text-black">Our Services</h1>
+      <p class="mt-4 text-black/70 text-base max-w-xl mx-auto">
+        Licensed and insured handyman services across Rochester and Monroe County. Flat-rate pricing, no surprises.
+      </p>
     </div>
     <!-- Wave divider -->
     <div style="overflow:hidden; line-height:0;">
@@ -20,15 +24,7 @@ const { services } = content;
     </div>
   </div>
 
-  <!-- INTRO TEXT -->
-  <section class="py-14 bg-white">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <p class="uppercase text-xs tracking-widest text-gray-500 font-semibold mb-4">WHAT WE THINK OF US</p>
-      <h2 class="text-4xl font-bold text-gray-900">Honesty, Integrity & Experience</h2>
-    </div>
-  </section>
-
-  <!-- SERVICE BLOCKS: alternating left/right -->
+  <!-- SERVICE BLOCKS: alternating, problem → solution → benefits -->
   {services.map((svc, i) => (
     <section
       id={svc.id}
@@ -36,30 +32,57 @@ const { services } = content;
       style={i % 2 === 0 ? 'background:#fff;' : 'background:#f5f5f5;'}
     >
       <div class="max-w-7xl mx-auto px-6 lg:px-10">
-        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 0 ? '' : 'lg:flex lg:flex-row-reverse'}`}>
+        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start ${i % 2 !== 0 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
 
-          {/* Image */}
-          <div class="overflow-hidden">
+          <!-- Image -->
+          <div class="overflow-hidden sticky top-24">
             <img
               src={svc.image}
               alt={svc.title}
               class="w-full object-cover"
-              style="min-height:350px; object-position:center; background:#e5e7eb;"
+              style="min-height:380px; object-position:center; background:#e5e7eb;"
               onerror="this.style.background='#e5e7eb'"
             />
           </div>
 
-          {/* Text */}
+          <!-- Text: problem → solution → benefits -->
           <div>
-            <h2 class="text-4xl font-bold text-gray-900 mb-3">{svc.title}</h2>
+            <h2 class="text-4xl font-bold text-gray-900 mb-2">{svc.title}</h2>
             <div class="w-10 h-1 mb-6" style="background:#F2A93B;"></div>
-            <p class="text-base leading-relaxed text-gray-500 mb-8">{svc.description}</p>
+            <p class="text-base leading-relaxed text-gray-500 mb-8">{svc.shortDescription}</p>
+
+            <!-- Problem -->
+            <div class="mb-6 p-5" style="background:#fafafa; border-left:3px solid #e5e7eb;">
+              <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">The Problem</p>
+              <p class="text-base text-gray-600 leading-relaxed">{svc.problem}</p>
+            </div>
+
+            <!-- Solution -->
+            <div class="mb-6 p-5" style="background:#fafafa; border-left:3px solid #F2A93B;">
+              <p class="text-xs font-bold uppercase tracking-widest mb-2" style="color:#c47d10;">Our Solution</p>
+              <p class="text-base text-gray-600 leading-relaxed">{svc.solution}</p>
+            </div>
+
+            <!-- Benefits -->
+            <ul class="space-y-3 mb-8">
+              {svc.benefits.map((b) => (
+                <li class="flex items-start gap-3">
+                  <div class="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5" style="background:#F2A93B;">
+                    <svg class="w-3 h-3" fill="none" stroke="black" stroke-width="3" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+                    </svg>
+                  </div>
+                  <span class="text-base text-gray-700">{b}</span>
+                </li>
+              ))}
+            </ul>
+
             <a
               href="/contact"
               style="background:#F2A93B;"
               class="inline-block text-black font-bold text-sm px-8 py-4 hover:brightness-95 transition-all"
             >
-              Read More
+              Get a Free Quote
             </a>
           </div>
 
@@ -68,7 +91,7 @@ const { services } = content;
     </section>
   ))}
 
-  <!-- TESTIMONIALS -->
-  <Testimonials />
+  <!-- QUOTE FORM -->
+  <QuoteForm />
 
 </MainLayout>

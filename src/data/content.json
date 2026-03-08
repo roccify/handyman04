@@ -22,7 +22,6 @@
   "nav": [
     { "label": "Home", "href": "/" },
     { "label": "Services", "href": "/services" },
-    { "label": "Testimonials", "href": "/#testimonials" },
     { "label": "About Us", "href": "/about" },
     { "label": "Contact", "href": "/contact" }
   ],
@@ -34,26 +33,99 @@
     "ctaHref": "/services",
     "image": "/images/hero-home.jpg"
   },
-  "floatingCards": [
+  "services": [
     {
       "id": "maintenance",
-      "title": "Maintenance",
-      "text": "Regular home maintenance to keep your property in top condition year-round.",
-      "image": "/images/service-01.jpg"
+      "title": "Home Maintenance",
+      "shortDescription": "Seasonal upkeep and preventive repairs to keep your property in top condition year-round.",
+      "image": "/images/service-01.jpg",
+      "icon": "wrench",
+      "problem": "Small issues left unattended — dripping faucets, sticking doors, worn caulk — quietly grow into costly repairs.",
+      "solution": "Our technicians handle all routine maintenance in a single scheduled visit, fully stocked and ready.",
+      "benefits": [
+        "Seasonal inspection included with every visit",
+        "Prevents costly emergency repairs",
+        "One technician handles multiple trades",
+        "Flat-rate pricing — no surprises"
+      ]
     },
     {
       "id": "plumbing",
-      "title": "Plumbing",
-      "text": "Faucet replacement, fixture installs, and minor plumbing repairs.",
-      "image": "/images/service-05.jpg"
+      "title": "Plumbing Repairs",
+      "shortDescription": "Faucet replacement, fixture installs, leak repairs, and under-sink work done right.",
+      "image": "/images/service-05.jpg",
+      "icon": "droplet",
+      "problem": "Leaky faucets, slow drains, and running toilets waste water and drive up your utility bills.",
+      "solution": "We diagnose and fix plumbing issues on the same visit using quality materials, tested before we leave.",
+      "benefits": [
+        "Faucet and fixture replacement",
+        "Showerhead and toilet installs",
+        "Under-sink and supply line repairs",
+        "Every connection pressure-tested"
+      ]
     },
     {
-      "id": "decorating",
-      "title": "Decorating",
-      "text": "Drywall patching, painting prep, and finish work done right.",
-      "image": "/images/service-02.jpg"
+      "id": "drywall",
+      "title": "Drywall & Painting",
+      "shortDescription": "Drywall patching, skim coating, texture matching, and paint-ready finish work.",
+      "image": "/images/service-02.jpg",
+      "icon": "brush",
+      "problem": "Holes, cracks, and nail pops in drywall look unprofessional and lower your home's value.",
+      "solution": "We patch, skim, and texture-match your walls so repairs blend in completely — paint-ready same day.",
+      "benefits": [
+        "Texture matching on existing walls",
+        "Skim coat for smooth finish",
+        "Paint-ready results same day",
+        "All patch sizes — small to large"
+      ]
+    },
+    {
+      "id": "carpentry",
+      "title": "Carpentry",
+      "shortDescription": "Door repairs, furniture assembly, shelving installation, and wood repairs.",
+      "image": "/images/service-03.jpg",
+      "icon": "hammer",
+      "problem": "Sticking doors, broken hinges, and sagging shelves are daily frustrations that are simple to fix.",
+      "solution": "Our carpenters handle door planing, hinge replacement, custom shelving, and furniture assembly in one visit.",
+      "benefits": [
+        "Door repair and full replacement",
+        "Custom shelving and mounting",
+        "Furniture assembly (IKEA and others)",
+        "Deck board and fence repairs"
+      ]
+    },
+    {
+      "id": "electrical",
+      "title": "Electrical",
+      "shortDescription": "Outlet and switch replacement, light fixture installation, and ceiling fan mounting.",
+      "image": "/images/service-04.jpg",
+      "icon": "bolt",
+      "problem": "Flickering lights, dead outlets, and outdated fixtures are safety hazards that need professional attention.",
+      "solution": "We handle all minor electrical work safely and to code — no oversized jobs, just reliable small-task electrical.",
+      "benefits": [
+        "Outlet and switch replacement",
+        "Ceiling fan and light fixture install",
+        "GFCI upgrades for kitchens and baths",
+        "All work meets NY safety codes"
+      ]
+    },
+    {
+      "id": "flooring",
+      "title": "Flooring",
+      "shortDescription": "Hardwood repair, laminate installation, tile replacement, and vinyl plank fitting.",
+      "image": "/images/service-06.jpg",
+      "icon": "squares",
+      "problem": "Scratched hardwood, cracked tiles, and lifting laminate are eyesores that get worse if ignored.",
+      "solution": "We repair and replace flooring sections precisely — matching existing material wherever possible.",
+      "benefits": [
+        "Hardwood scratch and plank repair",
+        "Tile replacement and re-grouting",
+        "Laminate and vinyl plank fitting",
+        "Transition strip installation"
+      ]
     }
   ],
+  "homepageServiceIds": ["maintenance", "plumbing", "drywall", "carpentry", "electrical", "flooring"],
   "readySection": {
     "eyebrow": "HIGHLY EXPERIENCED HANDYMEN",
     "title": "Ready & Waiting To Assist",
@@ -71,44 +143,13 @@
     "ctaHref": "/services",
     "image": "/images/work-01.jpg"
   },
-  "darkServices": [
-    {
-      "icon": "wrench",
-      "title": "Maintenance",
-      "description": "Regular upkeep and preventive repairs to protect your home year-round."
-    },
-    {
-      "icon": "droplet",
-      "title": "Plumbing",
-      "description": "Faucet and fixture replacement, leak repairs, and under-sink work."
-    },
-    {
-      "icon": "brush",
-      "title": "Decorating",
-      "description": "Drywall patching, paint prep, and interior finish work."
-    },
-    {
-      "icon": "hammer",
-      "title": "Carpentry",
-      "description": "Door repairs, furniture assembly, shelving, and wood repairs."
-    }
-  ],
   "helpSection": {
     "title": "We're Here To Help",
     "description": "Our technicians bring an average of 8 years of field experience across multiple trades. Every team member is licensed, insured, and background-checked.",
     "features": [
-      {
-        "icon": "shield",
-        "text": "We're fully protected with the correct equipment and insurance"
-      },
-      {
-        "icon": "certificate",
-        "text": "We have all of the regulatory safety certifications required by NY"
-      },
-      {
-        "icon": "clock",
-        "text": "On-time scheduling guaranteed every single visit"
-      }
+      { "icon": "shield", "text": "We're fully protected with the correct equipment and insurance" },
+      { "icon": "certificate", "text": "We have all of the regulatory safety certifications required by NY" },
+      { "icon": "clock", "text": "On-time scheduling guaranteed every single visit" }
     ],
     "image": "/images/about-story.jpg"
   },
@@ -116,72 +157,54 @@
     {
       "quote": "They mounted our TV, patched two drywall holes, and replaced a bathroom faucet all in one visit. Everything done cleanly and the price matched the quote exactly.",
       "name": "Shona Jones",
-      "initials": "SJ",
       "location": "Rochester, NY",
       "rating": 5
     },
     {
       "quote": "Our front door had been sticking for months. They diagnosed the issue, planed the frame, and it closes perfectly now. Quick, professional, and fairly priced.",
       "name": "Chris Johnson",
-      "initials": "CJ",
       "location": "Brighton, NY",
       "rating": 5
     },
     {
       "quote": "Hired ReliableFix to assemble a full bedroom set and mount shelving in my new apartment. Finished everything in under three hours. Will not bother with DIY again.",
       "name": "Lisa Davis",
-      "initials": "LD",
       "location": "Irondequoit, NY",
       "rating": 5
     }
   ],
-  "news": [
+  "faq": [
     {
-      "image": "/images/work-04.jpg",
-      "title": "Staining Your Decking",
-      "excerpt": "The right stain protects your deck from Rochester's freeze-thaw cycles and keeps it looking sharp for years.",
-      "href": "#",
-      "date": "Jan · 10 min read"
+      "question": "What is meant by your best price promise?",
+      "answer": "We quote a flat rate before any work begins. The price you're quoted is the price you pay — no hidden fees, no hourly surprises. If additional issues are found, we tell you before proceeding."
     },
     {
-      "image": "/images/work-05.jpg",
-      "title": "The Best Floating Shelves",
-      "excerpt": "Choosing and installing floating shelves that stay level, hold weight, and look great in any room.",
-      "href": "#",
-      "date": "Feb · 12 min read"
+      "question": "Are your quotes no obligation?",
+      "answer": "Yes. We provide free estimates for all standard jobs. You're under no obligation to proceed after receiving a quote."
     },
     {
-      "image": "/images/work-06.jpg",
-      "title": "Plumbing Certification",
-      "excerpt": "What NY homeowners should know when hiring a plumber or handyman for fixture work.",
-      "href": "#",
-      "date": "Mar · 8 min read"
-    }
-  ],
-  "services": [
-    {
-      "id": "maintenance",
-      "title": "Maintenance",
-      "description": "Regular home maintenance keeps your property in top condition year-round. We handle seasonal checks, minor repairs, and preventive work so small issues never become big ones.",
-      "image": "/images/service-01.jpg"
+      "question": "Do you offer a warranty for your work?",
+      "answer": "Yes. All workmanship is backed by a 30-day satisfaction guarantee. If something isn't right, we come back and fix it at no charge."
     },
     {
-      "id": "plumbing",
-      "title": "Plumbing",
-      "description": "Faucet replacement, showerhead installs, under-sink fixture work, and minor leak repairs. We use quality materials, test every connection, and leave no mess behind.",
-      "image": "/images/service-05.jpg"
+      "question": "Is there an emergency callout fee?",
+      "answer": "Same-day and urgent appointments are available at standard flat-rate pricing. We do not add emergency surcharges for standard service calls booked same day."
     },
     {
-      "id": "decorating",
-      "title": "Decorating",
-      "description": "Drywall patching, skim coating, paint preparation, and finish work. We texture-match existing walls and deliver paint-ready results the same day.",
-      "image": "/images/service-02.jpg"
+      "question": "Are you insured?",
+      "answer": "Yes. ReliableFix carries full general liability insurance and all technicians are background-checked and covered."
     },
     {
-      "id": "carpentry",
-      "title": "Carpentry",
-      "description": "Door repair and replacement, furniture assembly, shelving installation, deck board replacement, and fence repairs. Skilled carpentry work at transparent flat-rate prices.",
-      "image": "/images/service-03.jpg"
+      "question": "Do you supply your own materials?",
+      "answer": "Yes. We bring all tools and standard materials. For specialty items (specific tile, custom hardware), we'll let you know in advance what you'll need to source."
+    },
+    {
+      "question": "What areas do you serve?",
+      "answer": "We serve Rochester and surrounding Monroe County communities including Irondequoit, Brighton, Webster, Greece, Fairport, Penfield, Pittsford, Victor, Gates, Henrietta, and Chili."
+    },
+    {
+      "question": "How do I book an appointment?",
+      "answer": "Call us at (585) 331-4721 or use the contact form on our website. We typically confirm within a few hours and offer appointments as soon as next business day."
     }
   ],
   "stats": [
@@ -210,7 +233,7 @@
     "serviceImages": [
       { "src": "/images/service-01.jpg", "label": "Maintenance", "id": "maintenance" },
       { "src": "/images/service-05.jpg", "label": "Plumbing", "id": "plumbing" },
-      { "src": "/images/service-02.jpg", "label": "Decorating", "id": "decorating" },
+      { "src": "/images/service-02.jpg", "label": "Drywall", "id": "drywall" },
       { "src": "/images/service-03.jpg", "label": "Carpentry", "id": "carpentry" }
     ]
   },
@@ -218,15 +241,16 @@
     "quickLinks": [
       { "label": "Home", "href": "/" },
       { "label": "Services", "href": "/services" },
-      { "label": "Testimonials", "href": "/#testimonials" },
       { "label": "About Us", "href": "/about" },
       { "label": "Contact", "href": "/contact" }
     ],
     "services": [
-      { "label": "Maintenance", "href": "/services#maintenance" },
-      { "label": "Plumbing", "href": "/services#plumbing" },
-      { "label": "Decorating", "href": "/services#decorating" },
-      { "label": "Carpentry", "href": "/services#carpentry" }
+      { "label": "Home Maintenance", "href": "/services#maintenance" },
+      { "label": "Plumbing Repairs", "href": "/services#plumbing" },
+      { "label": "Drywall & Painting", "href": "/services#drywall" },
+      { "label": "Carpentry", "href": "/services#carpentry" },
+      { "label": "Electrical", "href": "/services#electrical" },
+      { "label": "Flooring", "href": "/services#flooring" }
     ]
   },
   "serviceAreas": [

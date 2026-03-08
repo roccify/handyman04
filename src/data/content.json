@@ -1,0 +1,237 @@
+{
+  "business": {
+    "name": "ReliableFix",
+    "fullName": "ReliableFix Handyman Services",
+    "tagline": "Trusted & Reliable Handyman Services",
+    "phone": "(585) 331-4721",
+    "phoneHref": "tel:+15853314721",
+    "email": "info@reliablefixrochester.com",
+    "address": "85 Mushroom Blvd, Rochester, NY 14623",
+    "city": "Rochester",
+    "state": "NY",
+    "zip": "14623",
+    "founded": 2014,
+    "serviceArea": "Rochester, NY and nearby towns including Irondequoit, Brighton, Webster, Greece, and Fairport"
+  },
+  "social": {
+    "facebook": "https://facebook.com",
+    "instagram": "https://instagram.com",
+    "google": "https://google.com",
+    "yelp": "https://yelp.com"
+  },
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Testimonials", "href": "/#testimonials" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "hero": {
+    "eyebrow": "TRUSTED HANDYMAN SERVICES",
+    "headline": "Trusted & Reliable Handyman Services",
+    "description": "Rochester's licensed and insured handyman team since 2014. Flat-rate pricing, prompt scheduling, and work done right the first time.",
+    "cta": "Learn More",
+    "ctaHref": "/services",
+    "image": "/images/hero-home.jpg"
+  },
+  "floatingCards": [
+    {
+      "id": "maintenance",
+      "title": "Maintenance",
+      "text": "Regular home maintenance to keep your property in top condition year-round.",
+      "image": "/images/service-01.jpg"
+    },
+    {
+      "id": "plumbing",
+      "title": "Plumbing",
+      "text": "Faucet replacement, fixture installs, and minor plumbing repairs.",
+      "image": "/images/service-05.jpg"
+    },
+    {
+      "id": "decorating",
+      "title": "Decorating",
+      "text": "Drywall patching, painting prep, and finish work done right.",
+      "image": "/images/service-02.jpg"
+    }
+  ],
+  "readySection": {
+    "eyebrow": "HIGHLY EXPERIENCED HANDYMEN",
+    "title": "Ready & Waiting To Assist",
+    "bullets": [
+      "We're fully protected with the correct equipment and insurance",
+      "We have all of the regulatory safety certifications required by NY",
+      "Background-checked technicians with 5+ years of field experience"
+    ],
+    "image": "/images/about-team.jpg"
+  },
+  "bestServices": {
+    "title": "Best Services In Town",
+    "description": "From drywall repair to deck restoration, our skilled team handles every job with attention to detail, transparent pricing, and a satisfaction guarantee.",
+    "cta": "Our Services",
+    "ctaHref": "/services",
+    "image": "/images/work-01.jpg"
+  },
+  "darkServices": [
+    {
+      "icon": "wrench",
+      "title": "Maintenance",
+      "description": "Regular upkeep and preventive repairs to protect your home year-round."
+    },
+    {
+      "icon": "droplet",
+      "title": "Plumbing",
+      "description": "Faucet and fixture replacement, leak repairs, and under-sink work."
+    },
+    {
+      "icon": "brush",
+      "title": "Decorating",
+      "description": "Drywall patching, paint prep, and interior finish work."
+    },
+    {
+      "icon": "hammer",
+      "title": "Carpentry",
+      "description": "Door repairs, furniture assembly, shelving, and wood repairs."
+    }
+  ],
+  "helpSection": {
+    "title": "We're Here To Help",
+    "description": "Our technicians bring an average of 8 years of field experience across multiple trades. Every team member is licensed, insured, and background-checked.",
+    "features": [
+      {
+        "icon": "shield",
+        "text": "We're fully protected with the correct equipment and insurance"
+      },
+      {
+        "icon": "certificate",
+        "text": "We have all of the regulatory safety certifications required by NY"
+      },
+      {
+        "icon": "clock",
+        "text": "On-time scheduling guaranteed every single visit"
+      }
+    ],
+    "image": "/images/about-story.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "They mounted our TV, patched two drywall holes, and replaced a bathroom faucet all in one visit. Everything done cleanly and the price matched the quote exactly.",
+      "name": "Shona Jones",
+      "initials": "SJ",
+      "location": "Rochester, NY",
+      "rating": 5
+    },
+    {
+      "quote": "Our front door had been sticking for months. They diagnosed the issue, planed the frame, and it closes perfectly now. Quick, professional, and fairly priced.",
+      "name": "Chris Johnson",
+      "initials": "CJ",
+      "location": "Brighton, NY",
+      "rating": 5
+    },
+    {
+      "quote": "Hired ReliableFix to assemble a full bedroom set and mount shelving in my new apartment. Finished everything in under three hours. Will not bother with DIY again.",
+      "name": "Lisa Davis",
+      "initials": "LD",
+      "location": "Irondequoit, NY",
+      "rating": 5
+    }
+  ],
+  "news": [
+    {
+      "image": "/images/work-04.jpg",
+      "title": "Staining Your Decking",
+      "excerpt": "The right stain protects your deck from Rochester's freeze-thaw cycles and keeps it looking sharp for years.",
+      "href": "#",
+      "date": "Jan · 10 min read"
+    },
+    {
+      "image": "/images/work-05.jpg",
+      "title": "The Best Floating Shelves",
+      "excerpt": "Choosing and installing floating shelves that stay level, hold weight, and look great in any room.",
+      "href": "#",
+      "date": "Feb · 12 min read"
+    },
+    {
+      "image": "/images/work-06.jpg",
+      "title": "Plumbing Certification",
+      "excerpt": "What NY homeowners should know when hiring a plumber or handyman for fixture work.",
+      "href": "#",
+      "date": "Mar · 8 min read"
+    }
+  ],
+  "services": [
+    {
+      "id": "maintenance",
+      "title": "Maintenance",
+      "description": "Regular home maintenance keeps your property in top condition year-round. We handle seasonal checks, minor repairs, and preventive work so small issues never become big ones.",
+      "image": "/images/service-01.jpg"
+    },
+    {
+      "id": "plumbing",
+      "title": "Plumbing",
+      "description": "Faucet replacement, showerhead installs, under-sink fixture work, and minor leak repairs. We use quality materials, test every connection, and leave no mess behind.",
+      "image": "/images/service-05.jpg"
+    },
+    {
+      "id": "decorating",
+      "title": "Decorating",
+      "description": "Drywall patching, skim coating, paint preparation, and finish work. We texture-match existing walls and deliver paint-ready results the same day.",
+      "image": "/images/service-02.jpg"
+    },
+    {
+      "id": "carpentry",
+      "title": "Carpentry",
+      "description": "Door repair and replacement, furniture assembly, shelving installation, deck board replacement, and fence repairs. Skilled carpentry work at transparent flat-rate prices.",
+      "image": "/images/service-03.jpg"
+    }
+  ],
+  "stats": [
+    { "number": "300", "suffix": "+", "label": "Projects Completed" },
+    { "number": "500", "suffix": "+", "label": "Satisfied Clients" },
+    { "number": "440", "suffix": "", "label": "Jobs This Year" },
+    { "number": "25", "suffix": "", "label": "Amazing Employees" }
+  ],
+  "certifications": [
+    "NY Home Improvement Contractor License",
+    "General Liability Insurance",
+    "EPA Lead-Safe Certification",
+    "Background-Checked Technicians",
+    "Flat-Rate Transparent Pricing",
+    "Locally Owned Since 2014"
+  ],
+  "contact": {
+    "hours": "Mon–Fri: 7:00 AM – 6:00 PM | Sat: 8:00 AM – 3:00 PM",
+    "mapEmbed": "https://maps.google.com/maps?q=Rochester,+NY&t=&z=13&ie=UTF8&iwloc=&output=embed",
+    "heroImage": "/images/hero-contact.jpg"
+  },
+  "about": {
+    "bannerImage": "/images/cta-banner.jpg",
+    "storyImage": "/images/about-story.jpg",
+    "helpImage": "/images/about-team.jpg",
+    "serviceImages": [
+      { "src": "/images/service-01.jpg", "label": "Maintenance", "id": "maintenance" },
+      { "src": "/images/service-05.jpg", "label": "Plumbing", "id": "plumbing" },
+      { "src": "/images/service-02.jpg", "label": "Decorating", "id": "decorating" },
+      { "src": "/images/service-03.jpg", "label": "Carpentry", "id": "carpentry" }
+    ]
+  },
+  "footerLinks": {
+    "quickLinks": [
+      { "label": "Home", "href": "/" },
+      { "label": "Services", "href": "/services" },
+      { "label": "Testimonials", "href": "/#testimonials" },
+      { "label": "About Us", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "services": [
+      { "label": "Maintenance", "href": "/services#maintenance" },
+      { "label": "Plumbing", "href": "/services#plumbing" },
+      { "label": "Decorating", "href": "/services#decorating" },
+      { "label": "Carpentry", "href": "/services#carpentry" }
+    ]
+  },
+  "serviceAreas": [
+    "Rochester", "Irondequoit", "Brighton", "Webster",
+    "Greece", "Fairport", "Penfield", "Pittsford",
+    "Victor", "Gates", "Henrietta", "Chili"
+  ]
+}

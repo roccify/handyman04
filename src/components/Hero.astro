@@ -1,0 +1,88 @@
+---
+import content from '../data/content.json';
+const { hero, floatingCards } = content;
+---
+
+<!-- HERO WRAPPER: position relative so cards can overlap -->
+<div class="relative">
+
+  <!-- Hero image section: 600px height -->
+  <div
+    class="relative w-full overflow-hidden"
+    style="height:600px;"
+  >
+    <!-- Background image -->
+    <div
+      class="absolute inset-0 bg-cover bg-center"
+      style={`background-image: url('${hero.image}'); background-color: #2a2a2a;`}
+    ></div>
+
+    <!-- Overlay gradient: dark left, fades right -->
+    <div
+      class="absolute inset-0"
+      style="background: linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.55) 50%, rgba(0,0,0,0.25) 100%);"
+    ></div>
+
+    <!-- Hero content: left aligned, vertically centered -->
+    <div class="relative z-10 h-full max-w-7xl mx-auto px-6 lg:px-10 flex items-center">
+      <div class="max-w-xl">
+
+        <!-- Eyebrow -->
+        <p class="uppercase text-xs tracking-widest text-yellow-400 font-semibold mb-4">
+          {hero.eyebrow}
+        </p>
+
+        <!-- Headline -->
+        <h1 class="text-5xl font-bold tracking-tight text-white leading-tight mb-6">
+          {hero.headline}
+        </h1>
+
+        <!-- Description -->
+        <p class="text-base leading-relaxed text-gray-300 mb-8 max-w-md">
+          {hero.description}
+        </p>
+
+        <!-- CTA button -->
+        <a
+          href={hero.ctaHref}
+          style="background:#F2A93B;"
+          class="inline-block text-black font-bold text-sm px-8 py-4 hover:brightness-95 transition-all"
+        >
+          {hero.cta}
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING SERVICE CARDS: overlap hero bottom + next section top -->
+  <!-- Cards sit below the hero, pulled up with negative margin -->
+  <div class="relative z-20" style="margin-top: -80px;">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {floatingCards.map((card) => (
+          <div class="bg-white rounded shadow-lg overflow-hidden">
+            <!-- Card image -->
+            <div
+              class="w-full bg-gray-200 bg-cover bg-center"
+              style={`height:200px; background-image:url('${card.image}');`}
+            ></div>
+            <!-- Card content -->
+            <div class="p-6">
+              <h3 class="text-2xl font-semibold text-gray-900 mb-2">{card.title}</h3>
+              <p class="text-base leading-relaxed text-gray-500 mb-4">{card.text}</p>
+              <a
+                href={`/services#${card.id}`}
+                style="background:#F2A93B;"
+                class="inline-block text-black font-bold text-sm px-5 py-2.5 hover:brightness-95 transition-all"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+</div>

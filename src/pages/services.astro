@@ -1,0 +1,74 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Testimonials from '../components/Testimonials.astro';
+import content from '../data/content.json';
+const { services } = content;
+---
+
+<MainLayout title="Services | ReliableFix Handyman Rochester NY">
+
+  <!-- HERO BANNER: yellow background -->
+  <div style="background:#F2A93B; padding-top:120px;" class="pb-0">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 pb-10 text-center">
+      <h1 class="text-5xl font-bold tracking-tight text-black">Services</h1>
+    </div>
+    <!-- Wave divider -->
+    <div style="overflow:hidden; line-height:0;">
+      <svg viewBox="0 0 1200 80" preserveAspectRatio="none" style="display:block; width:100%; height:60px;">
+        <path d="M0,40 C200,80 400,0 600,40 C800,80 1000,0 1200,40 L1200,80 L0,80 Z" fill="#ffffff"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- INTRO TEXT -->
+  <section class="py-14 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="uppercase text-xs tracking-widest text-gray-500 font-semibold mb-4">WHAT WE THINK OF US</p>
+      <h2 class="text-4xl font-bold text-gray-900">Honesty, Integrity & Experience</h2>
+    </div>
+  </section>
+
+  <!-- SERVICE BLOCKS: alternating left/right -->
+  {services.map((svc, i) => (
+    <section
+      id={svc.id}
+      class="py-20 scroll-mt-24"
+      style={i % 2 === 0 ? 'background:#fff;' : 'background:#f5f5f5;'}
+    >
+      <div class="max-w-7xl mx-auto px-6 lg:px-10">
+        <div class={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 0 ? '' : 'lg:flex lg:flex-row-reverse'}`}>
+
+          {/* Image */}
+          <div class="overflow-hidden">
+            <img
+              src={svc.image}
+              alt={svc.title}
+              class="w-full object-cover"
+              style="min-height:350px; object-position:center; background:#e5e7eb;"
+              onerror="this.style.background='#e5e7eb'"
+            />
+          </div>
+
+          {/* Text */}
+          <div>
+            <h2 class="text-4xl font-bold text-gray-900 mb-3">{svc.title}</h2>
+            <div class="w-10 h-1 mb-6" style="background:#F2A93B;"></div>
+            <p class="text-base leading-relaxed text-gray-500 mb-8">{svc.description}</p>
+            <a
+              href="/contact"
+              style="background:#F2A93B;"
+              class="inline-block text-black font-bold text-sm px-8 py-4 hover:brightness-95 transition-all"
+            >
+              Read More
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- TESTIMONIALS -->
+  <Testimonials />
+
+</MainLayout>

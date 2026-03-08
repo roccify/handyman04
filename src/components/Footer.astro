@@ -1,0 +1,118 @@
+---
+import content from '../data/content.json';
+const { business, social, footerLinks } = content;
+const year = new Date().getFullYear();
+---
+
+<!-- FOOTER TOP BAR: black -->
+<div style="background:#0f0f0f;" class="w-full">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
+    <p class="text-white text-sm font-medium">
+      Highly Qualified, Time Served Professional Handyman
+    </p>
+    <a
+      href={business.phoneHref}
+      class="flex items-center gap-2 text-white font-bold text-sm hover:text-yellow-400 transition-colors"
+    >
+      <svg class="w-4 h-4" style="color:#F2A93B;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+      </svg>
+      {business.phone}
+    </a>
+  </div>
+</div>
+
+<!-- MAIN FOOTER: yellow -->
+<footer style="background:#F2A93B;">
+
+  <!-- Logo + CTA row -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 pt-8 pb-6 flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-black/10">
+    <a href="/" class="flex items-center gap-0">
+      <span style="width:4px; height:36px; background:#0f0f0f; display:inline-block; margin-right:10px; flex-shrink:0;"></span>
+      <span class="flex flex-col leading-none">
+        <span style="font-size:1.35rem; font-weight:900; letter-spacing:-0.02em; color:#0f0f0f; line-height:1;">{business.name.toUpperCase()}</span>
+        <span style="font-size:0.6rem; font-weight:600; letter-spacing:0.18em; color:#0f0f0f; opacity:0.6; text-transform:uppercase; line-height:1; margin-top:3px;">Handyman Services</span>
+      </span>
+    </a>
+    <div class="flex gap-3">
+      <a
+        href="/contact"
+        style="background:#0f0f0f;"
+        class="text-white font-bold text-sm px-5 py-2.5 hover:bg-gray-800 transition-colors"
+      >
+        Chat Directly With Us
+      </a>
+      <a
+        href="/contact"
+        class="border-2 border-black text-black font-bold text-sm px-5 py-2.5 hover:bg-black hover:text-white transition-colors"
+      >
+        Book An Appointment
+      </a>
+    </div>
+  </div>
+
+  <!-- 4 column grid -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <!-- Col 1: Logo + description -->
+    <div>
+      <h4 class="text-black text-xs font-bold uppercase tracking-wider mb-4">Services</h4>
+      <ul class="space-y-2">
+        {footerLinks.services.map((link) => (
+          <li>
+            <a href={link.href} class="text-black/70 hover:text-black text-sm transition-colors">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Col 2: Testimonials + misc -->
+    <div>
+      <h4 class="text-black text-xs font-bold uppercase tracking-wider mb-4">Quick Links</h4>
+      <ul class="space-y-2">
+        {footerLinks.quickLinks.map((link) => (
+          <li>
+            <a href={link.href} class="text-black/70 hover:text-black text-sm transition-colors">
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Col 3: Legal links -->
+    <div>
+      <h4 class="text-black text-xs font-bold uppercase tracking-wider mb-4">Legal</h4>
+      <ul class="space-y-2">
+        <li><a href="#" class="text-black/70 hover:text-black text-sm transition-colors">FAQs</a></li>
+        <li><a href="#" class="text-black/70 hover:text-black text-sm transition-colors">Safety Policy</a></li>
+        <li><a href="#" class="text-black/70 hover:text-black text-sm transition-colors">Privacy Policy</a></li>
+        <li><a href="/contact" class="text-black/70 hover:text-black text-sm transition-colors">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Col 4: Social links -->
+    <div>
+      <h4 class="text-black text-xs font-bold uppercase tracking-wider mb-4">Follow Us</h4>
+      <ul class="space-y-2">
+        <li><a href={social.facebook} target="_blank" rel="noopener noreferrer" class="text-black/70 hover:text-black text-sm transition-colors">Like Us On Facebook ↗</a></li>
+        <li><a href={social.google} target="_blank" rel="noopener noreferrer" class="text-black/70 hover:text-black text-sm transition-colors">Find Us On Google ↗</a></li>
+        <li><a href={social.instagram} target="_blank" rel="noopener noreferrer" class="text-black/70 hover:text-black text-sm transition-colors">Follow Us On Instagram ↗</a></li>
+        <li><a href={social.yelp} target="_blank" rel="noopener noreferrer" class="text-black/70 hover:text-black text-sm transition-colors">Find Us On Yelp ↗</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer bottom: copyright -->
+  <div class="border-t border-black/10">
+    <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4">
+      <p class="text-black/60 text-xs text-center">
+        &copy; {year} ReliableFix Handyman Services. All rights reserved.
+      </p>
+    </div>
+  </div>
+
+</footer>

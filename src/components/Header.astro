@@ -1,0 +1,112 @@
+---
+import content from '../data/content.json';
+const { business, nav, social } = content;
+---
+
+<!-- LEVEL 1: Black top bar -->
+<div style="background:#0f0f0f; height:40px;" class="w-full">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
+
+    <!-- Left: social icons -->
+    <div class="flex items-center gap-4">
+      <a href={social.facebook} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+      <a href={social.google} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Twitter">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href={social.instagram} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </a>
+      <a href={social.yelp} target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Yelp">
+        <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M20.16 12.73l-4.703 1.14c-.435.105-.864-.205-.864-.652 0-.24.116-.46.312-.594l3.9-2.61c.37-.248.868-.118 1.07.278.42.826.477 1.843.285 2.438zm-2.045 3.837l-4.028 2.378c-.372.22-.847.068-1.02-.322-.1-.228-.07-.49.08-.69l2.99-3.96c.283-.375.822-.38 1.104-.002.717.956 1.063 2.028.874 2.596zm-6.107 4.682c0 .454-.376.823-.83.823-.207 0-.404-.076-.557-.213l-3.34-3.02c-.3-.272-.3-.73 0-1.001l3.34-3.022c.304-.275.778-.22 1.012.117.08.116.127.255.127.397l.247 5.92zm-5.67-9.028l-4.027-2.378c-.518-.306-.626-.995-.235-1.438.18-.205.44-.32.713-.31l5.04.19c.457.017.81.4.794.856-.008.194-.086.378-.22.517L6.338 12.22zm-.663-5.637l2.993 3.96c.28.373.18.897-.222 1.142-.24.146-.54.154-.79.02L3.64 8.84c-.395-.21-.536-.704-.32-1.104.44-.831 1.193-1.45 1.8-1.574.213-.044.427.005.58.144z"/></svg>
+      </a>
+    </div>
+
+    <!-- Right: utility links -->
+    <div class="hidden md:flex items-center gap-5">
+      <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">FAQs</a>
+      <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">Safety Policy</a>
+      <a href="#" class="text-gray-400 hover:text-white text-xs transition-colors">Privacy Policy</a>
+      <a href="/contact" class="text-gray-400 hover:text-white text-xs transition-colors">Contact Us</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- LEVEL 2: Yellow navbar -->
+<nav style="background:#F2A93B; height:80px;" class="w-full sticky top-0 z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 h-full flex items-center justify-between">
+
+    <!-- Logo: text-based, visually strong -->
+    <a href="/" class="flex items-center gap-0 flex-shrink-0 group">
+      <!-- Yellow accent bar left -->
+      <span style="width:4px; height:36px; background:#0f0f0f; display:inline-block; margin-right:10px; flex-shrink:0;"></span>
+      <span class="flex flex-col leading-none">
+        <span style="font-size:1.35rem; font-weight:900; letter-spacing:-0.02em; color:#0f0f0f; line-height:1;">
+          {business.name.toUpperCase()}
+        </span>
+        <span style="font-size:0.6rem; font-weight:600; letter-spacing:0.18em; color:#0f0f0f; opacity:0.6; text-transform:uppercase; line-height:1; margin-top:3px;">
+          Handyman Services
+        </span>
+      </span>
+    </a>
+
+    <!-- Nav center -->
+    <ul class="hidden lg:flex items-center gap-8">
+      {nav.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class="text-black font-semibold text-sm hover:underline underline-offset-4 transition-all"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Phone CTA: black button -->
+    <a
+      href={business.phoneHref}
+      style="background:#0f0f0f;"
+      class="hidden lg:flex items-center gap-2 text-white font-bold text-sm px-5 py-2.5 hover:bg-gray-800 transition-colors flex-shrink-0"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+      </svg>
+      {business.phone}
+    </a>
+
+    <!-- Mobile menu button -->
+    <button id="mob-toggle" class="lg:hidden p-2" aria-label="Menu">
+      <svg class="w-6 h-6" fill="none" stroke="#0f0f0f" stroke-width="2.5" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Mobile menu dropdown -->
+  <div id="mob-menu" class="hidden lg:hidden border-t border-black/15 px-6 py-4 space-y-1" style="background:#F2A93B;">
+    {nav.map((item) => (
+      <a href={item.href} class="block text-black font-semibold text-sm py-2 border-b border-black/10 last:border-0">
+        {item.label}
+      </a>
+    ))}
+    <a
+      href={business.phoneHref}
+      style="background:#0f0f0f;"
+      class="flex items-center justify-center gap-2 text-white font-bold text-sm py-3 mt-2"
+    >
+      {business.phone}
+    </a>
+  </div>
+
+</nav>
+
+<script is:inline>
+  document.getElementById('mob-toggle').addEventListener('click', function() {
+    document.getElementById('mob-menu').classList.toggle('hidden');
+  });
+</script>
